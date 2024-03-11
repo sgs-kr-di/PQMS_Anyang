@@ -1,0 +1,943 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E602DF5E-1C09-4DDF-967A-3C47DC396F3C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PQMS</RootNamespace>
+    <AssemblyName>NEW_PQMS%28AYN%29</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>\\Apse-iap066\pqms\NEW_SETUP\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\Apse-iap066\pqms\NEW_SETUP\</InstallUrl>
+    <ApplicationRevision>107</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D9A74AE2C7EBD2188FFD35277821B1C496EEC3FD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PQMS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Mvvm.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="GroupDocs.Merger, Version=22.5.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\GroupDocs.Merger.22.5.0\lib\net20\GroupDocs.Merger.dll</HintPath>
+    </Reference>
+    <Reference Include="GroupDocs.Merger.Cloud.Sdk, Version=22.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GroupDocs.Merger-Cloud.22.5.0\lib\net20\GroupDocs.Merger.Cloud.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Barcode, Version=6.8.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.7.9.0\lib\net40\Spire.Barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.DataExport, Version=4.8.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.7.9.0\lib\net40\Spire.DataExport.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.DataExport.ResourceMgr, Version=2.1.0.0, Culture=neutral, PublicKeyToken=4bc1500157862925, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.7.9.0\lib\net40\Spire.DataExport.ResourceMgr.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Doc, Version=10.9.1.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.7.9.0\lib\net40\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.DocViewer.Forms, Version=7.8.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.7.9.0\lib\net40\Spire.DocViewer.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Email, Version=5.8.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.7.9.0\lib\net40\Spire.Email.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.OfficeViewer.Forms, Version=7.9.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.7.9.0\lib\net40\Spire.OfficeViewer.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=8.9.2.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.7.9.0\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Asp, Version=7.8.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.7.9.0\lib\net40\Spire.PdfViewer.Asp.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Forms, Version=7.8.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.7.9.0\lib\net40\Spire.PdfViewer.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Presentation, Version=7.8.7.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.7.9.0\lib\net40\Spire.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Spreadsheet, Version=6.8.1.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.7.9.0\lib\net40\Spire.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.XLS, Version=12.8.3.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.7.9.0\lib\net40\Spire.XLS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ulee.Framework">
+      <HintPath>..\Pakages\Ulee\Ulee.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Source\A.Form\Form2_Anyang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\Form2_Anyang.Designer.cs">
+      <DependentUpon>Form2_Anyang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmAccountApproveRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmAccountApproveRole.Designer.cs">
+      <DependentUpon>frmAccountApproveRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmAccountRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmAccountRequest.designer.cs">
+      <DependentUpon>frmAccountRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmApproveRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmApproveRequest.designer.cs">
+      <DependentUpon>frmApproveRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmApproveRequestCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmApproveRequestCheck.Designer.cs">
+      <DependentUpon>frmApproveRequestCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmApproveRequestCheckALL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmApproveRequestCheckALL.Designer.cs">
+      <DependentUpon>frmApproveRequestCheckALL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmApproveRequestCheckVer2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmApproveRequestCheckVer2.Designer.cs">
+      <DependentUpon>frmApproveRequestCheckVer2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmApproveRequestVer2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmApproveRequestVer2.Designer.cs">
+      <DependentUpon>frmApproveRequestVer2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmApproveSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmApproveSetting.Designer.cs">
+      <DependentUpon>frmApproveSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmAttachment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmAttachment.Designer.cs">
+      <DependentUpon>frmAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmEditRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmEditRequest.Designer.cs">
+      <DependentUpon>frmEditRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmEachListPaperHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmEachListPaperHistory.Designer.cs">
+      <DependentUpon>frmEachListPaperHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmMasterApproveRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmMasterApproveRole.designer.cs">
+      <DependentUpon>frmMasterApproveRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmPQMS_STAFF_Dept_Part.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmPQMS_STAFF_Dept_Part.Designer.cs">
+      <DependentUpon>frmPQMS_STAFF_Dept_Part.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmRoleAssessmentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmRoleAssessmentReport.Designer.cs">
+      <DependentUpon>frmRoleAssessmentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmOrgChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmOrgChart.Designer.cs">
+      <DependentUpon>frmOrgChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmAllFileOpen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmAllFileOpen.Designer.cs">
+      <DependentUpon>frmAllFileOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmRolePaperPeriodicInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmRolePaperPeriodicInspection.Designer.cs">
+      <DependentUpon>frmRolePaperPeriodicInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmRolePaperTraining.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmRolePaperTraining.Designer.cs">
+      <DependentUpon>frmRolePaperTraining.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmEduHistoryDaejang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmEduHistoryDaejang.Designer.cs">
+      <DependentUpon>frmEduHistoryDaejang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmEduReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmEduReport.Designer.cs">
+      <DependentUpon>frmEduReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmExcelPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmExcelPreview.designer.cs">
+      <DependentUpon>frmExcelPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmGroupMemberMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmGroupMemberMaster.designer.cs">
+      <DependentUpon>frmGroupMemberMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmJobDescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmJobDescription.Designer.cs">
+      <DependentUpon>frmJobDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmLOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmLOP.designer.cs">
+      <DependentUpon>frmLOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmLOPDescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmLOPDescription.Designer.cs">
+      <DependentUpon>frmLOPDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmMemberRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmMemberRequest.designer.cs">
+      <DependentUpon>frmMemberRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmPDFPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmPDFPreview.designer.cs">
+      <DependentUpon>frmPDFPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmPQMS_STAFFP_RP_ETC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmPQMS_STAFFP_RP_ETC.Designer.cs">
+      <DependentUpon>frmPQMS_STAFFP_RP_ETC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmPQMS_STAFF_PRE_JOB_INFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmPQMS_STAFF_PRE_JOB_INFO.Designer.cs">
+      <DependentUpon>frmPQMS_STAFF_PRE_JOB_INFO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmReport.designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmRepository.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmRepository.designer.cs">
+      <DependentUpon>frmRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmRepositoryInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmRepositoryInfo.Designer.cs">
+      <DependentUpon>frmRepositoryInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmRoleOrgChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmRoleOrgChart.Designer.cs">
+      <DependentUpon>frmRoleOrgChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmRolePaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmRolePaper.Designer.cs">
+      <DependentUpon>frmRolePaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmSite.designer.cs">
+      <DependentUpon>frmSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmStaffInfoAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmStaffInfoAll.Designer.cs">
+      <DependentUpon>frmStaffInfoAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmSTAFF_CERTI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmSTAFF_CERTI.Designer.cs">
+      <DependentUpon>frmSTAFF_CERTI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmSTAFF_EachList_REMARK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmSTAFF_EachList_REMARK.Designer.cs">
+      <DependentUpon>frmSTAFF_EachList_REMARK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmSTAFF_TRAIN_ATTENDEE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmSTAFF_TRAIN_ATTENDEE.Designer.cs">
+      <DependentUpon>frmSTAFF_TRAIN_ATTENDEE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmSTAFF_TRAIN_GOAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmSTAFF_TRAIN_GOAL.Designer.cs">
+      <DependentUpon>frmSTAFF_TRAIN_GOAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmSTAFF_TRAIN_OBJECT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmSTAFF_TRAIN_OBJECT.Designer.cs">
+      <DependentUpon>frmSTAFF_TRAIN_OBJECT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmSTAFF_TRAIN_CONTENTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmSTAFF_TRAIN_CONTENTS.Designer.cs">
+      <DependentUpon>frmSTAFF_TRAIN_CONTENTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmUserIdRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmUserIdRequest.designer.cs">
+      <DependentUpon>frmUserIdRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmWSsetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmWSsetup.designer.cs">
+      <DependentUpon>frmWSsetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\Form10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\Form10.Designer.cs">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\Form11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\Form11.Designer.cs">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\Form12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\Form12.Designer.cs">
+      <DependentUpon>Form12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\Form13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\Form13.Designer.cs">
+      <DependentUpon>Form13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\Form9.Designer.cs">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\A.Form\us_StaffInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\us_StaffInfo.Designer.cs">
+      <DependentUpon>us_StaffInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\us_StaffList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\us_StaffList.Designer.cs">
+      <DependentUpon>us_StaffList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\A.Form\us_StaffListAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\A.Form\us_StaffListAll.Designer.cs">
+      <DependentUpon>us_StaffListAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmAccountManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmAccountManager.Designer.cs">
+      <DependentUpon>frmAccountManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmAccountMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmAccountMaster.Designer.cs">
+      <DependentUpon>frmAccountMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmAccountRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmAccountRequest.Designer.cs">
+      <DependentUpon>frmAccountRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmAppMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmAppMaster.Designer.cs">
+      <DependentUpon>frmAppMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmApproveRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmApproveRole.Designer.cs">
+      <DependentUpon>frmApproveRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmChoiceApprover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmChoiceApprover.Designer.cs">
+      <DependentUpon>frmChoiceApprover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmCodeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmCodeMaster.Designer.cs">
+      <DependentUpon>frmCodeMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmDeptMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmDeptMaster.Designer.cs">
+      <DependentUpon>frmDeptMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmGroupMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmGroupMaster.Designer.cs">
+      <DependentUpon>frmGroupMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmGroupMemberMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmGroupMemberMaster.Designer.cs">
+      <DependentUpon>frmGroupMemberMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmGroupMemberMaster_org.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmGroupMemberMaster_org.Designer.cs">
+      <DependentUpon>frmGroupMemberMaster_org.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmLocationMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmLocationMaster.Designer.cs">
+      <DependentUpon>frmLocationMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmMenuMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmMenuMaster.Designer.cs">
+      <DependentUpon>frmMenuMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmMenuRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmMenuRole.Designer.cs">
+      <DependentUpon>frmMenuRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmRequestStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmRequestStatus.Designer.cs">
+      <DependentUpon>frmRequestStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmUserIdRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmUserIdRequest.Designer.cs">
+      <DependentUpon>frmUserIdRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmUserMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmUserMaster.Designer.cs">
+      <DependentUpon>frmUserMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\frmUserRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\frmUserRequest.Designer.cs">
+      <DependentUpon>frmUserRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\B.Login\global.cs" />
+    <Compile Include="Source\B.Login\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\B.Login\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\C.Unit\UnitAppDatabase.cs" />
+    <Compile Include="Source\C.Unit\UnitAppHelper.cs" />
+    <Compile Include="Source\C.Unit\UnitAppResource.cs" />
+    <Compile Include="Source\C.Unit\UnitAppType.cs" />
+    <Compile Include="Source\C.Unit\UnitCommon.cs" />
+    <Compile Include="Source\C.Unit\UnitGridBookmark.cs" />
+    <Compile Include="Source\C.Unit\UnitSMTP.cs" />
+    <EmbeddedResource Include="Source\A.Form\Form2_Anyang.resx">
+      <DependentUpon>Form2_Anyang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmAccountApproveRole.resx">
+      <DependentUpon>frmAccountApproveRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmAccountRequest.resx">
+      <DependentUpon>frmAccountRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmApproveRequest.resx">
+      <DependentUpon>frmApproveRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmApproveRequestCheck.resx">
+      <DependentUpon>frmApproveRequestCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmApproveRequestCheckALL.resx">
+      <DependentUpon>frmApproveRequestCheckALL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmApproveRequestCheckVer2.resx">
+      <DependentUpon>frmApproveRequestCheckVer2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmApproveRequestVer2.resx">
+      <DependentUpon>frmApproveRequestVer2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmApproveSetting.resx">
+      <DependentUpon>frmApproveSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmAttachment.resx">
+      <DependentUpon>frmAttachment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmEditRequest.resx">
+      <DependentUpon>frmEditRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmEachListPaperHistory.resx">
+      <DependentUpon>frmEachListPaperHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmMasterApproveRole.resx">
+      <DependentUpon>frmMasterApproveRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmPQMS_STAFF_Dept_Part.resx">
+      <DependentUpon>frmPQMS_STAFF_Dept_Part.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmRoleAssessmentReport.resx">
+      <DependentUpon>frmRoleAssessmentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmOrgChart.resx">
+      <DependentUpon>frmOrgChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmAllFileOpen.resx">
+      <DependentUpon>frmAllFileOpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmRolePaperPeriodicInspection.resx">
+      <DependentUpon>frmRolePaperPeriodicInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmRolePaperTraining.resx">
+      <DependentUpon>frmRolePaperTraining.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmEduHistoryDaejang.resx">
+      <DependentUpon>frmEduHistoryDaejang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmEduReport.resx">
+      <DependentUpon>frmEduReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmExcelPreview.resx">
+      <DependentUpon>frmExcelPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmGroupMemberMaster.resx">
+      <DependentUpon>frmGroupMemberMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmJobDescription.resx">
+      <DependentUpon>frmJobDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmLOP.resx">
+      <DependentUpon>frmLOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmLOPDescription.resx">
+      <DependentUpon>frmLOPDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\Form10.resx">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\Form11.resx">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\Form12.resx">
+      <DependentUpon>Form12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\Form13.resx">
+      <DependentUpon>Form13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\Form9.resx">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmMemberRequest.resx">
+      <DependentUpon>frmMemberRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmPDFPreview.resx">
+      <DependentUpon>frmPDFPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmPQMS_STAFFP_RP_ETC.resx">
+      <DependentUpon>frmPQMS_STAFFP_RP_ETC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmPQMS_STAFF_PRE_JOB_INFO.resx">
+      <DependentUpon>frmPQMS_STAFF_PRE_JOB_INFO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmRepository.resx">
+      <DependentUpon>frmRepository.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmRepositoryInfo.resx">
+      <DependentUpon>frmRepositoryInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmRoleOrgChart.resx">
+      <DependentUpon>frmRoleOrgChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmRolePaper.resx">
+      <DependentUpon>frmRolePaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmSite.resx">
+      <DependentUpon>frmSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmStaffInfoAll.resx">
+      <DependentUpon>frmStaffInfoAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmSTAFF_CERTI.resx">
+      <DependentUpon>frmSTAFF_CERTI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmSTAFF_EachList_REMARK.resx">
+      <DependentUpon>frmSTAFF_EachList_REMARK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmSTAFF_TRAIN_ATTENDEE.resx">
+      <DependentUpon>frmSTAFF_TRAIN_ATTENDEE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmSTAFF_TRAIN_GOAL.resx">
+      <DependentUpon>frmSTAFF_TRAIN_GOAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmSTAFF_TRAIN_OBJECT.resx">
+      <DependentUpon>frmSTAFF_TRAIN_OBJECT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmSTAFF_TRAIN_CONTENTS.resx">
+      <DependentUpon>frmSTAFF_TRAIN_CONTENTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmUserIdRequest.resx">
+      <DependentUpon>frmUserIdRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\frmWSsetup.resx">
+      <DependentUpon>frmWSsetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Source\A.Form\us_StaffInfo.resx">
+      <DependentUpon>us_StaffInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\us_StaffList.resx">
+      <DependentUpon>us_StaffList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\A.Form\us_StaffListAll.resx">
+      <DependentUpon>us_StaffListAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmAccountManager.resx">
+      <DependentUpon>frmAccountManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmAccountMaster.resx">
+      <DependentUpon>frmAccountMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmAccountRequest.resx">
+      <DependentUpon>frmAccountRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmAppMaster.resx">
+      <DependentUpon>frmAppMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmApproveRole.resx">
+      <DependentUpon>frmApproveRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmChoiceApprover.resx">
+      <DependentUpon>frmChoiceApprover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmCodeMaster.resx">
+      <DependentUpon>frmCodeMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmDeptMaster.resx">
+      <DependentUpon>frmDeptMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmGroupMaster.resx">
+      <DependentUpon>frmGroupMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmGroupMemberMaster.resx">
+      <DependentUpon>frmGroupMemberMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmGroupMemberMaster_org.resx">
+      <DependentUpon>frmGroupMemberMaster_org.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmLocationMaster.resx">
+      <DependentUpon>frmLocationMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmMenuMaster.resx">
+      <DependentUpon>frmMenuMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmMenuRole.resx">
+      <DependentUpon>frmMenuRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmRequestStatus.resx">
+      <DependentUpon>frmRequestStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmUserIdRequest.resx">
+      <DependentUpon>frmUserIdRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmUserMaster.resx">
+      <DependentUpon>frmUserMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\frmUserRequest.resx">
+      <DependentUpon>frmUserRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\B.Login\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="PQMS_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PQMS41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PQMS3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PQMS4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
